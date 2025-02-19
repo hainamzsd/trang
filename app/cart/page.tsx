@@ -1,48 +1,45 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import Link from "next/link"
 
 export default function CartPage() {
-  const [cart, setCart] = useState([])
+  // const [cart, setCart] = useState([])
 
-  useEffect(() => {
-    // In a real application, you would fetch the cart from an API or local storage
-    const dummyCart = [
-      {
-        id: 1,
-        name: "Merino Wool Yarn",
-        price: 12.99,
-        quantity: 2,
-        image: "/placeholder.svg?height=100&width=100&text=Merino+Wool+Yarn",
-      },
-      {
-        id: 2,
-        name: "DSLR Camera Lens",
-        price: 299.99,
-        quantity: 1,
-        image: "/placeholder.svg?height=100&width=100&text=DSLR+Camera+Lens",
-      },
-    ]
-    setCart(dummyCart)
-  }, [])
+  // useEffect(() => {
+  //   // In a real application, you would fetch the cart from an API or local storage
+  //   const dummyCart = [
+  //     {
+  //       id: 1,
+  //       name: "Merino Wool Yarn",
+  //       price: 12.99,
+  //       quantity: 2,
+  //       image: "/placeholder.svg?height=100&width=100&text=Merino+Wool+Yarn",
+  //     },
+  //     {
+  //       id: 2,
+  //       name: "DSLR Camera Lens",
+  //       price: 299.99,
+  //       quantity: 1,
+  //       image: "/placeholder.svg?height=100&width=100&text=DSLR+Camera+Lens",
+  //     },
+  //   ]
+  //   setCart(dummyCart)
+  // }, [])
 
-  const updateQuantity = (id, newQuantity) => {
-    setCart(cart.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
-  }
+  // const updateQuantity = (id, newQuantity) => {
+  //   setCart(cart.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
+  // }
 
-  const removeItem = (id) => {
-    setCart(cart.filter((item) => item.id !== id))
-  }
+  // const removeItem = (id) => {
+  //   setCart(cart.filter((item) => item.id !== id))
+  // }
 
-  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  // const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-serif font-bold text-pink-800 mb-8">Your Cart</h1>
 
-      {cart.length === 0 ? (
+      {/* {cart.length === 0 ? (
         <p className="text-gray-600">Your cart is empty.</p>
       ) : (
         <>
@@ -88,7 +85,7 @@ export default function CartPage() {
             </Link>
           </div>
         </>
-      )}
+      )} */}
     </div>
   )
 }

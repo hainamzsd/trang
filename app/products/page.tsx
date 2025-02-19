@@ -50,12 +50,12 @@ const products = [
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState<any>([])
 
   const filteredProducts =
     selectedCategory === "All" ? products : products.filter((product) => product.category === selectedCategory)
 
-  const addToCart = (product) => {
+  const addToCart = (product:any) => {
     setCart([...cart, product])
     alert(`Added ${product.name} to cart!`)
   }
