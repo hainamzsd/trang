@@ -1,18 +1,20 @@
 import Hero from "@/components/hero"
-import Categories from "@/components/categories"
 import FeaturedProducts from "@/components/featured-products"
 import WoolCreations from "@/components/wool-creations"
-import AboutUs from "@/components/about-us"
+import AsymmetricalGrid from "@/components/AsymmetricalGrid"
+import SplitSection from "@/components/SplitSection"
+import CuratedCollections from "@/components/CuratedCollections"
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Hero />
-      <Categories />
+      <CuratedCollections />
+      <AsymmetricalGrid />
       <FeaturedProducts />
       <WoolCreations />
-      <AboutUs />
+      <SplitSection />
+      {/* <AboutUs /> */}
     </div>
   )
 }
-

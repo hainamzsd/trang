@@ -1,9 +1,9 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Lato } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import Providers from "@/app/Providers" // Import the Providers component
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" })
@@ -28,11 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <body className="font-sans bg-white flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <Providers> {/* Wrap everything with Providers */}
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   )
 }
-
