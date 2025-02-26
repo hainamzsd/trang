@@ -15,9 +15,6 @@ const categories = [
   "LenSilk",
   "LenWool"
 ]
-<<<<<<< HEAD
-
-=======
 const categoryPrices = {
   LenAcrylic: 20000, // Giá cho Len Acrylic
   LenBamboo: 80000,  // Giá cho Len Bamboo
@@ -27,23 +24,12 @@ const categoryPrices = {
   LenSilk: 200000,    // Giá cho Len Silk
   LenWool: 52000,    // Giá cho Len Wool
 };
->>>>>>> master
 const products: any[] = []
 
 categories.slice(1).forEach((category) => {
   for (let i = 1; i <= 24; i++) {
     products.push({
       id: products.length + 1,
-<<<<<<< HEAD
-      name: category.replace("Len ", "") + " Sợi", // Example: Len Acrylic → Acrylic Sợi
-      price: 20, // Giá cố định
-      category: category,
-      image: `/${category}/${i}.png`
-    })
-  }
-})
-
-=======
       name: category.replace("Len ", "") + " Sợi", // Ví dụ: Len Acrylic → Acrylic Sợi
       price: categoryPrices[category as keyof typeof categoryPrices], // Lấy giá từ categoryPrices
       category: category,
@@ -51,7 +37,6 @@ categories.slice(1).forEach((category) => {
     });
   }
 });
->>>>>>> master
 export default function ProductsPage() {
   const { addToCart } = useCart()
   const [selectedCategory, setSelectedCategory] = useState("Tất cả")
@@ -67,11 +52,6 @@ export default function ProductsPage() {
   const currentProducts = filteredProducts.slice(indexOfFirstItem, indexOfLastItem)
 
   const handleAddToCart = (product: any, event: React.MouseEvent<HTMLButtonElement>) => {
-<<<<<<< HEAD
-    const buttonRect = event.currentTarget.getBoundingClientRect()
-    const cartIconRect = cartIconRef.current?.getBoundingClientRect()
-    console.log(cartIconRect)
-=======
     if (!cartIconRef.current) {
       console.error("Cart icon reference not found");
       addToCart(product); // Fallback without animation
@@ -79,7 +59,6 @@ export default function ProductsPage() {
     }
     const buttonRect = event.currentTarget.getBoundingClientRect();
     const cartIconRect = cartIconRef.current.getBoundingClientRect();
->>>>>>> master
     if (cartIconRect) {
       const flyElement = document.createElement("div")
       flyElement.style.position = "fixed"
@@ -110,11 +89,7 @@ export default function ProductsPage() {
       <motion.h1 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-        className="text-4xl font-serif font-bold text-pink-800 mb-8 text-center"
-=======
         className="text-4xl font-bold text-pink-800 mb-8 text-center"
->>>>>>> master
       >
         Bộ Sưu Tập Nguyên Liệu Cao Cấp
       </motion.h1>
@@ -192,11 +167,6 @@ export default function ProductsPage() {
     </div>
   )
 }
-<<<<<<< HEAD
-
-// Phân trang cải tiến
-=======
->>>>>>> master
 function Pagination({
   currentPage,
   totalPages,
@@ -209,17 +179,9 @@ function Pagination({
   const maxVisiblePages = 5 // Số trang hiển thị tối đa
   const halfVisiblePages = Math.floor(maxVisiblePages / 2)
 
-<<<<<<< HEAD
-  // Tạo phạm vi các trang hiển thị
   let startPage = Math.max(1, currentPage - halfVisiblePages)
   let endPage = Math.min(totalPages, currentPage + halfVisiblePages)
 
-  // Điều chỉnh phạm vi nếu gần đầu hoặc cuối
-=======
-  let startPage = Math.max(1, currentPage - halfVisiblePages)
-  let endPage = Math.min(totalPages, currentPage + halfVisiblePages)
-
->>>>>>> master
   if (currentPage <= halfVisiblePages) {
     endPage = Math.min(maxVisiblePages, totalPages)
   } else if (currentPage >= totalPages - halfVisiblePages) {
@@ -232,58 +194,6 @@ function Pagination({
   }
 
   return (
-<<<<<<< HEAD
-    <div className="flex justify-center gap-2 mt-12">
-      {/* Nút Trang trước */}
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="px-4 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        Trang trước
-      </button>
-
-      {/* Trang đầu tiên */}
-      {startPage > 1 && (
-        <>
-          <button
-            onClick={() => onPageChange(1)}
-            className={`px-4 py-2 rounded-full ${
-              currentPage === 1
-                ? "bg-pink-800 text-white"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-            }`}
-          >
-            1
-          </button>
-          {startPage > 2 && <span className="px-4 py-2">...</span>}
-        </>
-      )}
-
-      {/* Các trang hiển thị */}
-      {pages.map((page) => (
-        <button
-          key={page}
-          onClick={() => onPageChange(page)}
-          className={`px-4 py-2 rounded-full ${
-            currentPage === page
-              ? "bg-pink-800 text-white"
-              : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-          }`}
-        >
-          {page}
-        </button>
-      ))}
-
-      {/* Trang cuối cùng */}
-      {endPage < totalPages && (
-        <>
-          {endPage < totalPages - 1 && <span className="px-4 py-2">...</span>}
-          <button
-            onClick={() => onPageChange(totalPages)}
-            className={`px-4 py-2 rounded-full ${
-              currentPage === totalPages
-=======
     <div className="mt-12 flex justify-center">
       <div className="flex gap-2 overflow-x-auto whitespace-nowrap px-2 py-3 rounded-lg bg-white shadow-md w-fit max-w-full">
         {/* Nút Trang trước */}
@@ -319,29 +229,10 @@ function Pagination({
             onClick={() => onPageChange(page)}
             className={`min-w-[40px] px-3 py-2 rounded-full ${
               currentPage === page
->>>>>>> master
                 ? "bg-pink-800 text-white"
                 : "bg-gray-100 text-gray-600 hover:bg-gray-200"
             }`}
           >
-<<<<<<< HEAD
-            {totalPages}
-          </button>
-        </>
-      )}
-
-      {/* Nút Trang sau */}
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="px-4 py-2 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        Trang sau
-      </button>
-    </div>
-  )
-}
-=======
             {page}
           </button>
         ))}
@@ -375,4 +266,3 @@ function Pagination({
     </div>
   )
 }
->>>>>>> master

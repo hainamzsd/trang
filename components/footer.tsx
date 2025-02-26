@@ -9,11 +9,7 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-semibold mb-4">Về Chúng Tôi</h3>
             <p className="text-sm">
-<<<<<<< HEAD
-              Wool & Lens Vietnam cung cấp các sản phẩm len cao cấp, ống kính và sản phẩm truyền thống Việt Nam. 
-=======
               Wool Forest cung cấp các sản phẩm len cao cấp, ống kính và sản phẩm truyền thống Việt Nam. 
->>>>>>> master
               Chúng tôi tự hào về chất lượng và sự khéo léo trong từng sản phẩm.
             </p>
           </div>

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import Image from "next/image"
-import Link from "next/link"
-
-const products = [
-  { 
-    name: "Len Acrylic 2", 
-    price: 12.99, 
-=======
 "use client"
 import { useCart } from "./cart-context";
 import Image from "next/image";
@@ -17,45 +8,24 @@ const products = [
     id: 1,
     name: "Len Acrylic", 
     price: 15000, 
->>>>>>> master
     category: "Len Acrylic", 
     image: "/LenAcrylic/1.png" 
   },
   { 
-<<<<<<< HEAD
-    name: "Len Wool 2", 
-    price: 299.99, 
-=======
     id: 2,
     name: "Len Wool", 
     price: 52000, 
->>>>>>> master
     category: "Len Wool", 
     image: "/LenWool/2.png" 
   },
   { 
-<<<<<<< HEAD
-    name: "Len Bamboo 2", 
-    price: 15.99, 
-=======
     id: 3,
     name: "Len Bamboo", 
     price: 80000, 
->>>>>>> master
     category: "Len Bamboo", 
     image: "/LenBamboo/2.png" 
   },
   { 
-<<<<<<< HEAD
-    name: "Len Cotton 2", 
-    price: 49.99, 
-    category: "Len Cotton", 
-    image: "/LenCotton/2.png" 
-  },
-]
-
-export default function FeaturedProducts() {
-=======
     id: 4,
     name: "Len Cotton", 
     price: 15000, 
@@ -67,7 +37,6 @@ export default function FeaturedProducts() {
 export default function FeaturedProducts() {
   const { addToCart } = useCart();
 
->>>>>>> master
   return (
     <section className="py-20 bg-gradient-to-b from-pink-50 to-white">
       <div className="container mx-auto px-4">
@@ -79,15 +48,9 @@ export default function FeaturedProducts() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
-          {products.map((product, index) => (
-            <div
-              key={index}
-=======
           {products.map((product) => (
             <div
               key={product.id}
->>>>>>> master
               className="group relative bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2"
             >
               {/* Image Container with Hover Overlay */}
@@ -114,17 +77,6 @@ export default function FeaturedProducts() {
                   <p className="text-2xl font-bold text-pink-900">
                     {product.price.toLocaleString('vi-VN')}₫
                   </p>
-<<<<<<< HEAD
-                  <Link href={"/products"} className="relative overflow-hidden bg-pink-900 text-white px-6 py-2 rounded-full hover:bg-pink-800 transition-colors duration-300 before:absolute before:left-0 before:top-0 before:w-full before:h-full before:bg-white/10 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300">
-                    <span className="relative z-10">Mua ngay</span>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Hover Ribbon */}
-              <div className="absolute top-0 -left-8 w-32 bg-pink-900 text-white text-center py-1 transform -rotate-45 translate-y-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-xs font-medium">Sản phẩm mới</span>
-=======
                 </div>
 
                 {/* Add to Cart Button */}
@@ -134,7 +86,6 @@ export default function FeaturedProducts() {
                 >
                   Thêm vào giỏ hàng
                 </button>
->>>>>>> master
               </div>
             </div>
           ))}
@@ -158,10 +109,5 @@ export default function FeaturedProducts() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  )
-}
-=======
   );
 }
->>>>>>> master
