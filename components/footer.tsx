@@ -42,7 +42,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/returns" className="hover:text-pink-600">
+                <Link href="/return" className="hover:text-pink-600">
                   Đổi Trả & Hoàn Tiền
                 </Link>
               </li>
@@ -52,12 +52,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="hover:text-pink-600">
+                <Link href="/term" className="hover:text-pink-600">
                   Điều Khoản & Điều Kiện
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-pink-600">
+                <Link href="/policy" className="hover:text-pink-600">
                   Chính Sách Bảo Mật
                 </Link>
               </li>
