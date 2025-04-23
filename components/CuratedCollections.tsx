@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { useRef } from "react"
-import VietnamFlagDecoration from "./vietnam-celebration"
+import VietnamFlagDecoration from "./vietnam-decoration"
 
 const collections = [
   {

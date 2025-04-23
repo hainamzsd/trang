@@ -2,7 +2,7 @@
 import { useCart } from "./cart-context"
 import Image from "next/image"
 import Link from "next/link"
-import VietnamFlagDecoration from "./vietnam-celebration"
+import VietnamFlagDecoration from "./vietnam-decoration"
 const products = [
   {
     id: 1,
