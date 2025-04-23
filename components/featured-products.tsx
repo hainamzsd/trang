@@ -1,44 +1,47 @@
 "use client"
-import { useCart } from "./cart-context";
-import Image from "next/image";
-import Link from "next/link";
-
+import { useCart } from "./cart-context"
+import Image from "next/image"
+import Link from "next/link"
+import VietnamFlagDecoration from "./vietnam-celebration"
 const products = [
-  { 
+  {
     id: 1,
-    name: "Len Acrylic", 
-    price: 15000, 
-    category: "Len Acrylic", 
-    image: "/LenAcrylic/1.png" 
+    name: "Len Acrylic",
+    price: 15000,
+    category: "Len Acrylic",
+    image: "/LenAcrylic/1.png",
   },
-  { 
+  {
     id: 2,
-    name: "Len Wool", 
-    price: 52000, 
-    category: "Len Wool", 
-    image: "/LenWool/2.png" 
+    name: "Len Wool",
+    price: 52000,
+    category: "Len Wool",
+    image: "/LenWool/2.png",
   },
-  { 
+  {
     id: 3,
-    name: "Len Bamboo", 
-    price: 80000, 
-    category: "Len Bamboo", 
-    image: "/LenBamboo/2.png" 
+    name: "Len Bamboo",
+    price: 80000,
+    category: "Len Bamboo",
+    image: "/LenBamboo/2.png",
   },
-  { 
+  {
     id: 4,
-    name: "Len Cotton", 
-    price: 15000, 
-    category: "Len Cotton", 
-    image: "/LenCotton/2.png" 
+    name: "Len Cotton",
+    price: 15000,
+    category: "Len Cotton",
+    image: "/LenCotton/2.png",
   },
-];
+]
 
 export default function FeaturedProducts() {
-  const { addToCart } = useCart();
+  const { addToCart } = useCart()
 
   return (
-    <section className="py-20 bg-gradient-to-b from-pink-50 to-white">
+    <section className="py-20 bg-gradient-to-b from-pink-50 to-white relative">
+      {/* Vietnam flag decoration */}
+      <VietnamFlagDecoration variant="light" density="low" className="opacity-70" />
+
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-serif font-bold text-center text-pink-900 mb-16">
           Sản Phẩm Nổi Bật
@@ -56,7 +59,7 @@ export default function FeaturedProducts() {
               {/* Image Container with Hover Overlay */}
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src={product.image}
+                  src={product.image || "/placeholder.svg"}
                   alt={product.name}
                   width={400}
                   height={500}
@@ -70,17 +73,13 @@ export default function FeaturedProducts() {
 
               {/* Product Info */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {product.name}
-                </h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{product.name}</h3>
                 <div className="flex items-center justify-between">
-                  <p className="text-2xl font-bold text-pink-900">
-                    {product.price.toLocaleString('vi-VN')}₫
-                  </p>
+                  <p className="text-2xl font-bold text-pink-900">{product.price.toLocaleString("vi-VN")}₫</p>
                 </div>
 
                 {/* Add to Cart Button */}
-                <button 
+                <button
                   onClick={() => addToCart(product)}
                   className="mt-4 w-full bg-pink-900 text-white px-4 py-2 rounded-full font-semibold hover:bg-pink-800 transition duration-300"
                 >
@@ -93,14 +92,17 @@ export default function FeaturedProducts() {
 
         {/* View More Button */}
         <div className="mt-16 text-center">
-          <Link href={"/products"} className="inline-flex items-center bg-transparent border-2 border-pink-900 text-pink-900 px-8 py-3 rounded-full font-semibold hover:bg-pink-900 hover:text-white transition-all duration-300">
+          <Link
+            href={"/products"}
+            className="inline-flex items-center bg-transparent border-2 border-pink-900 text-pink-900 px-8 py-3 rounded-full font-semibold hover:bg-pink-900 hover:text-white transition-all duration-300"
+          >
             Xem Tất Cả Sản Phẩm
-            <svg 
-              xmlns="http://www.w3.org/2000/svg" 
-              className="ml-2 w-5 h-5" 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-2 w-5 h-5"
               viewBox="0 0 24 24"
-              fill="none" 
-              stroke="currentColor" 
+              fill="none"
+              stroke="currentColor"
               strokeWidth="2"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -109,5 +111,5 @@ export default function FeaturedProducts() {
         </div>
       </div>
     </section>
-  );
+  )
 }

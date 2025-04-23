@@ -1,49 +1,53 @@
 "use client"
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
+import { useRef } from "react"
+import VietnamFlagDecoration from "./vietnam-celebration"
 
 const collections = [
-    {
-      name: "Len Acrylic",
-      description: "Sợi len Acrylic mềm mại, nhẹ và giữ nhiệt tốt cho mùa đông.",
-      image: "/LenAcrylic/1.png",
-      link: "/LenAcrylic",
-    },
-    {
-      name: "Len Wool",
-      description: "Len Wool tự nhiên, ấm áp và bền bỉ, phù hợp cho mọi thời tiết.",
-      image: "/LenWool/1.png",
-      link: "/collections/lens-mastery",
-    },
-    {
-      name: "Len Pha",
-      description: "Sợi len pha kết hợp ưu điểm của nhiều loại sợi, mang đến sự thoải mái tối đa.",
-      image: "/LenPha/1.png",
-      link: "/collections/vietnamese-treasures",
-    },
-    {
-      name: "Len Mohair",
-      description: "Len Mohair cao cấp, mềm mịn và bóng đẹp, tạo cảm giác sang trọng.",
-      image: "/LenMohair/1.png",
-      link: "/collections/artisan-knits",
-    },
-];
+  {
+    name: "Len Acrylic",
+    description: "Sợi len Acrylic mềm mại, nhẹ và giữ nhiệt tốt cho mùa đông.",
+    image: "/LenAcrylic/1.png",
+    link: "/LenAcrylic",
+  },
+  {
+    name: "Len Wool",
+    description: "Len Wool tự nhiên, ấm áp và bền bỉ, phù hợp cho mọi thời tiết.",
+    image: "/LenWool/1.png",
+    link: "/collections/lens-mastery",
+  },
+  {
+    name: "Len Pha",
+    description: "Sợi len pha kết hợp ưu điểm của nhiều loại sợi, mang đến sự thoải mái tối đa.",
+    image: "/LenPha/1.png",
+    link: "/collections/vietnamese-treasures",
+  },
+  {
+    name: "Len Mohair",
+    description: "Len Mohair cao cấp, mềm mịn và bóng đẹp, tạo cảm giác sang trọng.",
+    image: "/LenMohair/1.png",
+    link: "/collections/artisan-knits",
+  },
+]
 
 export default function BoSuuTapTuyenChon() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
-      const scrollTo = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth;
-      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" });
+      const { scrollLeft, clientWidth } = scrollRef.current
+      const scrollTo = direction === "left" ? scrollLeft - clientWidth : scrollLeft + clientWidth
+      scrollRef.current.scrollTo({ left: scrollTo, behavior: "smooth" })
     }
-  };
+  }
 
   return (
     <section className="py-24 bg-white relative">
+      {/* Vietnam flag decoration */}
+      <VietnamFlagDecoration variant="light" density="low" />
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-4xl font-serif font-bold text-pink-900">Bộ Sưu Tập Tuyển Chọn</h2>
@@ -65,17 +69,14 @@ export default function BoSuuTapTuyenChon() {
           </div>
         </div>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
-        >
+        <div ref={scrollRef} className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory">
           {collections.map((collection, index) => (
             <div
               key={index}
               className="relative min-w-[300px] md:min-w-[400px] h-[500px] rounded-2xl overflow-hidden group snap-center"
             >
               <Image
-                src={collection.image}
+                src={collection.image || "/placeholder.svg"}
                 alt={collection.name}
                 layout="fill"
                 objectFit="cover"
@@ -97,5 +98,5 @@ export default function BoSuuTapTuyenChon() {
         </div>
       </div>
     </section>
-  );
+  )
 }

@@ -61,8 +61,8 @@ export default function TermsConditionsPage() {
                     Quý khách có quyền tạo tài khoản (account) trên website của chúng tôi để thuận tiện cho việc giao
                     dịch, hưởng những lợi ích của khách hàng thân thiết hoặc quý khách có thể từ chối việc đăng ký tạo
                     tài khoản mà không ảnh hưởng đến chất lượng dịch vụ bán hàng. Trong trường hợp quý khách tạo tài
-                    khoản trên website này, quý khách phải chấp thuận các điều khoản mà chúng tôi đưa ra trong mục "Điều
-                    khoản mua hàng" và chịu trách nhiệm hoàn toàn về việc quản lý tên đăng nhập và mật khẩu và không để
+                    khoản trên website này, quý khách phải chấp thuận các điều khoản mà chúng tôi đưa ra trong mục &quot;Điều
+                    khoản mua hàng&quot; và chịu trách nhiệm hoàn toàn về việc quản lý tên đăng nhập và mật khẩu và không để
                     bên thứ ba nào biết để truy cập vào tài khoản của mình trên website này. Chúng tôi không chịu trách
                     nhiệm cho bất cứ tổn thất nào khi quý khách không tuân thủ các điều khoản đã được nêu ra dù trực
                     tiếp hay gián tiếp.

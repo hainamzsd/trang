@@ -113,8 +113,8 @@ export default function FAQPage() {
           answer: (
             <div className="space-y-3">
               <ol className="list-decimal pl-5 space-y-2">
-                <li>Chọn sản phẩm → Chọn màu, số lượng → "Thêm vào giỏ".</li>
-                <li>Xem giỏ hàng → Kiểm tra đơn → "Thanh toán".</li>
+                <li>Chọn sản phẩm → Chọn màu, số lượng → &quot;Thêm vào giỏ&quot;.</li>
+                <li>Xem giỏ hàng → Kiểm tra đơn → &quot;Thanh toán&quot;.</li>
                 <li>
                   Điền thông tin giao hàng → Chọn phương thức thanh toán: Chuyển khoản, MoMo, ZaloPay, hoặc thanh toán
                   khi nhận hàng (COD).
@@ -344,7 +344,7 @@ export default function FAQPage() {
               <HelpCircle className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
               <h3 className="text-lg font-medium mb-2">Không tìm thấy kết quả</h3>
               <p className="text-muted-foreground">
-                Không tìm thấy câu hỏi nào phù hợp với "{searchQuery}". Vui lòng thử từ khóa khác hoặc{" "}
+                Không tìm thấy câu hỏi nào phù hợp với &quot;{searchQuery}&quot;. Vui lòng thử từ khóa khác hoặc{" "}
                 <a href="/lien-he" className="text-pink-800 hover:underline">
                   liên hệ với chúng tôi
                 </a>{" "}
