@@ -7,6 +7,7 @@ import Providers from "@/app/Providers"
 import VietnamCelebrationBg from "@/components/vietnam-celebration"
 import HolidayPopup from "@/components/holiday"
 import { HolidayPopupProvider } from "@/components/holiday-context"
+import MetaPixel from "@/components/MetaPixel"
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" })
@@ -31,7 +32,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <body className="font-sans bg-white flex flex-col min-h-screen">
-      <Providers>
+        <MetaPixel pixelId="YOUR_PIXEL_ID" />
+        <Providers>
           {/* Vietnam celebration background with subtle flags and confetti */}
           <VietnamCelebrationBg />
 
