@@ -8,6 +8,7 @@ import VietnamCelebrationBg from "@/components/vietnam-celebration"
 import HolidayPopup from "@/components/holiday"
 import { HolidayPopupProvider } from "@/components/holiday-context"
 import MetaPixel from "@/components/MetaPixel"
+import { Suspense } from 'react'
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" })
 const lato = Lato({ subsets: ["latin"], weight: ["400", "700"], variable: "--font-lato" })
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
   description: "Premium wools, lenses, and Vietnamese products",
   keywords: "wool, lens, Vietnam, knitting, photography, authentic products",
   authors: [{ name: "Wool & Lens Vietnam" }],
+  metadataBase: new URL('https://woolforest.shop'),
   openGraph: {
     title: "Wool & Lens Vietnam",
     description: "Premium wools, lenses, and Vietnamese products",
@@ -34,18 +36,18 @@ export default function RootLayout({
       <body className="font-sans bg-white flex flex-col min-h-screen">
         <MetaPixel pixelId="YOUR_PIXEL_ID" />
         <Providers>
-          {/* Vietnam celebration background with subtle flags and confetti */}
-          <VietnamCelebrationBg />
+          <Suspense fallback={<div>Loading...</div>}>
+            {/* Vietnam celebration background with subtle flags and confetti */}
+            <VietnamCelebrationBg variant="light" density="low" />
 
-          {/* Holiday popup context provider */}
-          <HolidayPopupProvider>
-            {/* Holiday popup that shows on first visit or when triggered */}
-            <HolidayPopup />
-            
-            <Header />
-            <main className="flex-grow">{children}</main>
-            <Footer />
-          </HolidayPopupProvider>
+            {/* Holiday popup context provider */}
+            <HolidayPopupProvider>
+              {/* Holiday popup that shows on first visit or when triggered */}
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </HolidayPopupProvider>
+          </Suspense>
         </Providers>
       </body>
     </html>

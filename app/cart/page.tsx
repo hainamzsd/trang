@@ -34,10 +34,12 @@ export default function CartPage() {
               {cart.map((product) => (
                 <div key={product.id} className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.name}
-                      className="w-16 h-16 object-cover rounded"
+                      width={100}
+                      height={100}
+                      className="w-24 h-24 object-cover rounded"
                     />
                     <div>
                       <h3 className="text-lg font-semibold">{product.name}</h3>

@@ -23,13 +23,14 @@ export default function AboutPage() {
       </motion.div>
 
       {/* Story Section */}
-      <div className="grid md:grid-cols-2 gap-12 mb-24">
-        <div className="relative h-96 rounded-xl overflow-hidden">
+      <div className="grid md:grid-cols-2 gap-12 mb-6">
+        <div className="rounded-xl overflow-hidden flex justify-center items-center">
           <Image
-            src="/about-team.jpg"
+            src="/a/1.png"
             alt="Đội ngũ Wool & Lens"
-            fill
             className="object-cover"
+            width={500}
+            height={200}
           />
         </div>
         <div>
@@ -74,10 +75,10 @@ export default function AboutPage() {
         <h2 className="text-3xl text-center text-pink-800 mb-12">Đội Ngũ Chuyên Gia</h2>
         <div className="grid md:grid-cols-4 gap-8">
           {[
-            { name: "Nguyễn Thị An", role: "Giám đốc Sáng tạo", photo: "/team-1.jpg" },
-            { name: "Trần Văn Bình", role: "Chuyên gia Vật Liệu", photo: "/team-2.jpg" },
-            { name: "Lê Thị Chi", role: "Quản lý Chất lượng", photo: "/team-3.jpg" },
-            { name: "Phạm Đức Dũng", role: "Trưởng Phòng Kỹ Thuật", photo: "/team-4.jpg" },
+            { name: "Nguyễn Ngọc Đoan Trang", role: "Giám đốc Sáng tạo", photo: "/a/TRANG.png" },
+            { name: "TRẦN THỊ KIỀU VI", role: "Chuyên gia Vật Liệu", photo: "/a/VI.png" },
+            { name: "PHẠM MỸ HẰNG", role: "Quản lý Chất lượng", photo: "/a/HANG.png" },
+            { name: "HỒ LÂM MINH", role: "Trưởng Phòng Kỹ Thuật", photo: "/a/MINH.png" },
           ].map((member, index) => (
             <div key={index} className="text-center">
               <div className="relative h-64 w-full mb-4 rounded-xl overflow-hidden">
@@ -109,7 +110,7 @@ export default function AboutPage() {
                 </svg>
                 <div>
                   <p className="font-semibold text-gray-800">Trụ Sở Chính</p>
-                  <p className="text-gray-600">Số 123, Đường Lê Lợi, Quận 1</p>
+                  <p className="text-gray-600">Số 1 Võ Văn Ngân, Bình Thọ, Thủ Đức</p>
                   <p className="text-gray-600">TP. Hồ Chí Minh, Việt Nam</p>
                 </div>
               </div>
@@ -130,7 +131,7 @@ export default function AboutPage() {
                 </svg>
                 <div>
                   <p className="font-semibold text-gray-800">Email</p>
-                  <p className="text-gray-600">contact@woollens.vn</p>
+                  <p className="text-gray-600">woolforestshop@gmail.com</p>
                 </div>
               </div>
             </div>

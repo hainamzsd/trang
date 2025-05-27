@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 declare global {
   interface Window {
@@ -41,15 +42,13 @@ export default function MetaPixel({ pixelId }: { pixelId: string }) {
           `,
         }}
       />
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          style={{ display: 'none' }}
-          src={`https://www.facebook.com/tr?id=${pixelId}&ev=PageView&noscript=1`}
-          alt=""
-        />
-      </noscript>
+      <Image
+        src="/path-to-image.jpg"
+        alt="Meta Pixel"
+        width={1}
+        height={1}
+        style={{ display: 'none' }}
+      />
     </>
   );
 } 

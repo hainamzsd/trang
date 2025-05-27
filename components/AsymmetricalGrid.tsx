@@ -42,7 +42,7 @@ export default function AsymmetricalGrid() {
               />
               <div className="absolute bottom-0 right-0 p-8 text-right z-20">
                 <h3 className="text-3xl font-serif text-white">Nghệ Thuật Quang Học</h3>
-                <Link href="/lenses" className="text-pink-200 hover:text-white flex items-center justify-end gap-2">
+                <Link href="/post1" className="text-pink-200 hover:text-white flex items-center justify-end gap-2">
                   Chinh Phục Mọi Góc Nhìn <ArrowRight size={20} />
                 </Link>
               </div>
@@ -59,13 +59,14 @@ export default function AsymmetricalGrid() {
               />
               <div className="absolute bottom-0 left-0 p-8 z-20">
                 <h3 className="text-3xl font-serif text-white">Báu Vật Văn Hóa</h3>
-                <Link href="/vietnamese" className="text-pink-200 hover:text-white flex items-center gap-2">
+                <Link href="/post2" className="text-pink-200 hover:text-white flex items-center gap-2">
                   Khám Phá Di Sản <ArrowRight size={20} />
                 </Link>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
   )

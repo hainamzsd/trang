@@ -33,11 +33,11 @@ export default function Hero() {
                 <span className="text-lg font-semibold text-white border-b-2 border-pink-300 pb-1 transition-all group-hover:border-pink-100">
                   Khám phá ngay
                 </span>
-                <ArrowRight className="text-pink-300 group-hover:text-pink-100 transition-colors" />
+                {/* <ArrowRight className="text-pink-300 group-hover:text-pink-100 transition-colors" /> */}
               </Link>
 
               {/* Elegant 30/4 Button */}
-              <button
+              {/* <button
                 onClick={openPopup}
                 className="inline-flex items-center gap-2 bg-transparent border border-white/60 text-white px-4 py-1.5 rounded-md hover:bg-white/10 transition-all duration-300 group"
               >
@@ -76,7 +76,7 @@ export default function Hero() {
                     50
                   </div>
                 </div>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

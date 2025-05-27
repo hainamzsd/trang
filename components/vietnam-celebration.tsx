@@ -2,7 +2,12 @@
 
 import { useEffect, useRef } from "react"
 
-export default function VietnamCelebrationBg() {
+interface VietnamFlagDecorationProps {
+  variant: 'light' | 'dark';
+  density: 'low' | 'medium' | 'high';
+}
+
+export default function VietnamFlagDecoration({ variant, density }: VietnamFlagDecorationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
