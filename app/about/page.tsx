@@ -28,9 +28,9 @@ export default function AboutPage() {
           <Image
             src="/a/1.png"
             alt="Đội ngũ Wool & Lens"
-            className="object-cover"
             width={500}
             height={200}
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
         <div>

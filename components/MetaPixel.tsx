@@ -1,26 +1,26 @@
-'use client';
+"use client"
 
-import Script from 'next/script';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from 'react';
-import Image from 'next/image';
+import Script from "next/script"
+import { usePathname, useSearchParams } from "next/navigation"
+import { useEffect, Suspense } from "react"
+import Image from "next/image"
 
 declare global {
   interface Window {
-    fbq: any;
+    fbq: any
   }
 }
 
-export default function MetaPixel({ pixelId }: { pixelId: string }) {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+function MetaPixelContent({ pixelId }: { pixelId: string }) {
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   useEffect(() => {
     // Track page views
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'PageView');
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "PageView")
     }
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams])
 
   return (
     <>
@@ -43,12 +43,20 @@ export default function MetaPixel({ pixelId }: { pixelId: string }) {
         }}
       />
       <Image
-        src="/path-to-image.jpg"
+        src="/placeholder.svg?height=1&width=1"
         alt="Meta Pixel"
         width={1}
         height={1}
-        style={{ display: 'none' }}
+        style={{ display: "none" }}
       />
     </>
-  );
-} 
+  )
+}
+
+export default function MetaPixel({ pixelId }: { pixelId: string }) {
+  return (
+    <Suspense fallback={null}>
+      <MetaPixelContent pixelId={pixelId} />
+    </Suspense>
+  )
+}

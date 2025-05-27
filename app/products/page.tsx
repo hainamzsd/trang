@@ -41,6 +41,7 @@ export default function ProductsPage() {
   const { addToCart } = useCart()
   const [selectedCategory, setSelectedCategory] = useState("Tất cả")
   const [currentPage, setCurrentPage] = useState(1)
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
   const itemsPerPage = 6
   const cartIconRef = useRef<HTMLAnchorElement>(null)
 
@@ -129,12 +130,16 @@ export default function ProductsPage() {
               exit={{ opacity: 0, scale: 0.9 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div className="relative h-64">
+              <div 
+                className="relative h-64 flex justify-center items-center cursor-pointer"
+                onClick={() => setSelectedImage(product.image)}
+              >
                 <Image
                   src={product.image}
                   alt={product.name}
-                  fill
-                  className="object-cover"
+                  width={200}
+                  height={200}
+                  style={{ width: 'auto', height: 'auto' }}
                 />
               </div>
               <div className="p-6">
@@ -157,6 +162,45 @@ export default function ProductsPage() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* Image Zoom Modal */}
+      <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedImage(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.9 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.9 }}
+              className="relative max-w-4xl w-full"
+              onClick={e => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <div className="relative w-full h-[80vh]">
+                <Image
+                  src={selectedImage}
+                  alt="Zoomed product"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                />
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Phân trang */}
       <Pagination
