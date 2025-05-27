@@ -10,7 +10,7 @@ export default function AsymmetricalGrid() {
       <VietnamFlagDecoration variant="light" density="low" />
 
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-serif font-bold text-center mb-16 text-pink-900">Hành Trình Thủ Công</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 text-pink-900">Hành Trình Thủ Công</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 h-[800px]">
           <div className="md:col-span-3 h-full relative group">
@@ -23,7 +23,7 @@ export default function AsymmetricalGrid() {
               className="scale-100 group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute bottom-0 left-0 p-8 z-20">
-              <h3 className="text-3xl font-serif text-white mb-4">Sợi Len Sang Trọng</h3>
+              <h3 className="text-3xl  text-white mb-4">Sợi Len Sang Trọng</h3>
               <Link href="/wools" className="text-pink-200 hover:text-white flex items-center gap-2">
                 Khám Phá Chất Liệu Tự Nhiên <ArrowRight size={20} />
               </Link>
@@ -34,14 +34,14 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/showcase/3.png"
+                src="/ANH1.png"
                 alt="Ống Kính Chuyên Nghiệp"
                 layout="fill"
                 objectFit="cover"
                 className="scale-100 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute bottom-0 right-0 p-8 text-right z-20">
-                <h3 className="text-3xl font-serif text-white">Nghệ Thuật Quang Học</h3>
+                <h3 className="text-3xl  text-white">Chart Móc Len: Trợ Thủ Đắc Lực Của Nàng Mê Len</h3>
                 <Link href="/post1" className="text-pink-200 hover:text-white flex items-center justify-end gap-2">
                   Chinh Phục Mọi Góc Nhìn <ArrowRight size={20} />
                 </Link>
@@ -51,14 +51,14 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/showcase/4.png"
+                src="/ANH5.png"
                 alt="Thủ Công Mỹ Nghệ Việt Nam"
                 layout="fill"
                 objectFit="cover"
                 className="scale-100 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 p-8 z-20">
-                <h3 className="text-3xl font-serif text-white">Báu Vật Văn Hóa</h3>
+                <h3 className="text-3xl  text-white">Học Móc Len Tại Wool Forest: Biến Sở Thích Thành Chất Riêng</h3>
                 <Link href="/post2" className="text-pink-200 hover:text-white flex items-center gap-2">
                   Khám Phá Di Sản <ArrowRight size={20} />
                 </Link>

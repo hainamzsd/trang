@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Heart, Share2, BookOpen, Users, Star, Play, CheckCircle, Lightbulb, Target } from "lucide-react"
 import { Metadata } from 'next'
+import { TextHighlighter } from '../components/text-highlighter'
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -122,7 +123,7 @@ const page = () => {
 
                 <div className="relative">
                   <Image
-                    src="/blog/hoc-moc-len.jpg"
+                    src="/ANH5.png"
                     alt="Học móc len tại Wool Forest"
                     width={400}
                     height={300}
@@ -278,17 +279,17 @@ const page = () => {
                 </h3>
 
                 <p className="text-gray-700 mb-6">
-                  Đây là phần đau đầu nhưng cũng thú vị nhất nè! Thị trường len vô vàn, nhưng để bắt đầu Wool Forest gợi
+                  Đây là phần đau đầu nhưng cũng thú vị nhất nè! Thị trường len vô vàn, nhưng để bắt đầu <TextHighlighter text="Wool Forest" /> gợi
                   ý bạn nên chọn:
                 </p>
 
                 <div className="space-y-6">
                   <Card className="border-l-4 border-l-rose-500">
                     <CardContent className="p-6">
-                      <h4 className="font-semibold text-lg text-rose-700 mb-3">Len Milk Cotton</h4>
+                      <h4 className="font-semibold text-lg text-rose-700 mb-3"><TextHighlighter text="Len Milk Cotton" /></h4>
                       <p className="text-gray-700">
-                        Cực kỳ phổ biến cho người mới! Len Milk Cotton mềm mại, đa dạng màu sắc, dễ móc, giá thành phải
-                        chăng, phù hợp để móc thú bông, khăn, mũ. Wool Forest có đủ bộ sưu tập Len Milk Cotton với bảng
+                        Cực kỳ phổ biến cho người mới! <TextHighlighter text="Len Milk Cotton" /> mềm mại, đa dạng màu sắc, dễ móc, giá thành phải
+                        chăng, phù hợp để móc thú bông, khăn, mũ. <TextHighlighter text="Wool Forest" /> có đủ bộ sưu tập <TextHighlighter text="Len Milk Cotton" /> với bảng
                         màu &quot;xịn xò&quot;!
                       </p>
                     </CardContent>
@@ -296,9 +297,9 @@ const page = () => {
 
                   <Card className="border-l-4 border-l-blue-500">
                     <CardContent className="p-6">
-                      <h4 className="font-semibold text-lg text-blue-700 mb-3">Len Cotton</h4>
+                      <h4 className="font-semibold text-lg text-blue-700 mb-3"><TextHighlighter text="Len Cotton" /></h4>
                       <p className="text-gray-700">
-                        Thích hợp cho các sản phẩm cần độ thấm hút tốt như khăn tắm, lót ly, túi. Len Cotton thường chắc
+                        Thích hợp cho các sản phẩm cần độ thấm hút tốt như khăn tắm, lót ly, túi. <TextHighlighter text="Len Cotton" /> thường chắc
                         chắn và đứng form hơn.
                       </p>
                     </CardContent>
@@ -307,7 +308,7 @@ const page = () => {
                   <Card className="border-l-4 border-l-green-500">
                     <CardContent className="p-6">
                       <h4 className="font-semibold text-lg text-green-700 mb-3">
-                        Len Sợi Tổng Hợp (Acrylic/Polyester)
+                        <TextHighlighter text="Len Sợi Tổng Hợp" />
                       </h4>
                       <p className="text-gray-700">
                         Bền, nhẹ, không gây kích ứng, đa dạng màu sắc và thường có giá thành phải chăng. Tuy nhiên, độ
@@ -320,10 +321,10 @@ const page = () => {
                 <div className="bg-gradient-to-r from-rose-100 to-orange-100 p-6 rounded-lg mt-6">
                   <h4 className="font-semibold text-lg mb-3 text-gray-800 flex items-center">
                     <Lightbulb className="w-5 h-5 mr-2 text-orange-600" />
-                    Lời khuyên từ Wool Forest:
+                    Lời khuyên từ <TextHighlighter text="Wool Forest" />:
                   </h4>
                   <p className="text-gray-700">
-                    Khi mới học móc len, hãy chọn len sợi vừa phải, màu sáng. Sợi quá to hoặc quá nhỏ sẽ khó móc, còn
+                    Khi mới <TextHighlighter text="học móc len" />, hãy chọn len sợi vừa phải, màu sáng. Sợi quá to hoặc quá nhỏ sẽ khó móc, còn
                     màu tối sẽ khó nhìn thấy mũi móc, dễ nản đó nha!
                   </p>
                 </div>
@@ -381,7 +382,7 @@ const page = () => {
 
                 <p className="text-gray-700 mt-6">
                   Sau khi thành thạo các dự án nhỏ, bạn có thể level up lên các sản phẩm lớn hơn như túi xách, mũ, khăn
-                  choàng... Tất cả nguyên liệu và dụng cụ cần thiết cho mọi dự án đều có sẵn tại Wool Forest!
+                  choàng... Tất cả nguyên liệu và dụng cụ cần thiết cho mọi dự án đều có sẵn tại <TextHighlighter text="Wool Forest" />!
                 </p>
               </div>
             </section>
@@ -424,9 +425,9 @@ const page = () => {
                         <span className="text-green-600 font-bold text-sm">3</span>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-800">Học Cách Đọc Chart</h4>
+                        <h4 className="font-semibold text-gray-800">Học Cách Đọc <TextHighlighter text="Chart móc len" /></h4>
                         <p className="text-gray-600 text-sm">
-                          Chart móc len giống như &quot;bản đồ kho báu&quot;. Khi đã quen với các ký hiệu, bạn có thể móc bất cứ
+                          <TextHighlighter text="Chart móc len" /> giống như &quot;bản đồ kho báu&quot;. Khi đã quen với các ký hiệu, bạn có thể móc bất cứ
                           thứ gì.
                         </p>
                       </div>
@@ -467,7 +468,7 @@ const page = () => {
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg">
                 <h2 className="text-2xl font-bold mb-4">Đừng chần chừ nữa! 🧶</h2>
                 <p className="text-lg mb-6 opacity-90">
-                  Hãy để Wool Forest cùng bạn móc nên những câu chuyện sáng tạo, những khoảnh khắc thư giãn và những sản
+                  Hãy để <TextHighlighter text="Wool Forest" /> cùng bạn móc nên những câu chuyện sáng tạo, những khoảnh khắc thư giãn và những sản
                   phẩm độc nhất vô nhị.
                 </p>
                 <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 font-semibold text-wrap">

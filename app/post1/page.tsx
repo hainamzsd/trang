@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Heart, Share2, BookOpen, Users, Star } from "lucide-react"
 import { Metadata } from 'next'
 import Script from 'next/script'
+import { TextHighlighter } from '../components/text-highlighter'
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -89,7 +90,7 @@ const page = () => {
             "dateModified": new Date().toISOString(),
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://woolforest.com/post1"
+              "@id": "https://woolforest.shop/post1"
             }
           })
         }}
@@ -103,7 +104,7 @@ const page = () => {
               CHART MÓC LEN: &ldquo;TRỢ THỦ&rdquo; ĐẮC LỰC CỦA NÀNG MÊ LEN!
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              WOOL FOREST &ldquo;BẬT MÍ&rdquo; CÁCH LÀM QUEN NGHỆ THUẬT SỢI TỪ A-Z!
+              <TextHighlighter text="WOOL FOREST &ldquo;BẬT MÍ&rdquo; CÁCH LÀM QUEN NGHỆ THUẬT SỢI TỪ A-Z!" />
             </p>
             <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
@@ -136,7 +137,7 @@ const page = () => {
                 </p>
                 <p className="text-lg leading-relaxed text-gray-700">
                   Khỏi lo nha! Bài viết này chính là &ldquo;kim chỉ nam&rdquo; giúp mấy bà unlock bí kíp đọc chart móc len siêu dễ,
-                  siêu nhanh để hành trình học móc len của mấy bà không còn là mơ với Wool Forest!
+                  siêu nhanh để hành trình <TextHighlighter text="học móc len" /> của mấy bà không còn là mơ với <TextHighlighter text="Wool Forest" />!
                 </p>
               </div>
 
