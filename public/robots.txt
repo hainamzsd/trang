@@ -1,0 +1,29 @@
+User-agent: *
+Allow: /
+
+# Allow access to static assets
+Allow: /public/
+Allow: /_next/static/
+Allow: /_next/image
+
+# Disallow admin or sensitive areas (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /redirecting
+
+# Allow important pages for SEO
+Allow: /products/
+Allow: /about
+Allow: /contact
+Allow: /faq
+Allow: /policy
+Allow: /shipping
+Allow: /return
+Allow: /term
+
+# Sitemap location
+Sitemap: https://woolforest.shop/sitemap.xml
+
+# Crawl delay (optional - adjust as needed)
+Crawl-delay: 1 

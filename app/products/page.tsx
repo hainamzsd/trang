@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { useCart } from "../../components/cart-context"
 
@@ -130,22 +131,23 @@ export default function ProductsPage() {
               exit={{ opacity: 0, scale: 0.9 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <div 
-                className="relative h-64 flex justify-center items-center cursor-pointer"
-                onClick={() => setSelectedImage(product.image)}
-              >
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={200}
-                  height={200}
-                  style={{ width: 'auto', height: 'auto' }}
-                />
-              </div>
+              <Link href={`/products/${product.id}`}>
+                <div className="relative h-64 flex justify-center items-center cursor-pointer hover:bg-gray-50 transition-colors">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={200}
+                    height={200}
+                    style={{ width: 'auto', height: 'auto' }}
+                  />
+                </div>
+              </Link>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                  {product.name}
-                </h3>
+                <Link href={`/products/${product.id}`}>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2 hover:text-pink-800 transition-colors cursor-pointer">
+                    {product.name}
+                  </h3>
+                </Link>
                 <div className="flex justify-between items-center">
                   <p className="text-2xl font-bold text-pink-800">
                     {product.price.toLocaleString('vi-VN')}₫
