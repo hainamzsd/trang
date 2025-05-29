@@ -24,7 +24,7 @@ export default function AsymmetricalGrid() {
             />
             <div className="absolute bottom-0 left-0 p-8 z-20">
               <h3 className="text-3xl  text-white mb-4">Sợi Len Sang Trọng</h3>
-              <Link href="/wools" className="text-pink-200 hover:text-white flex items-center gap-2">
+              <Link href="/301" className="text-pink-200 hover:text-white flex items-center gap-2">
                 Khám Phá Chất Liệu Tự Nhiên <ArrowRight size={20} />
               </Link>
             </div>
@@ -34,7 +34,7 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/ANH1.png"
+                src="/ANH/ANH1.png"
                 alt="Ống Kính Chuyên Nghiệp"
                 layout="fill"
                 objectFit="cover"
@@ -51,7 +51,7 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/ANH5.png"
+                src="/ANH/ANH5.png"
                 alt="Thủ Công Mỹ Nghệ Việt Nam"
                 layout="fill"
                 objectFit="cover"

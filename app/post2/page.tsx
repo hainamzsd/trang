@@ -123,7 +123,7 @@ const page = () => {
 
                 <div className="relative">
                   <Image
-                    src="/ANH5.png"
+                    src="/ANH/ANH5.png"
                     alt="Học móc len tại Wool Forest"
                     width={400}
                     height={300}
@@ -372,7 +372,7 @@ const page = () => {
 
                 <div className="text-center">
                   <Image
-                    src="/ANH6.png"
+                    src="/ANH/ANH6.png"
                     alt="Chậu hoa len màu xanh dương"
                     width={500}
                     height={300}

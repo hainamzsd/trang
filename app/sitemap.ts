@@ -12,6 +12,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
+      url: `${baseUrl}/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -106,14 +112,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/post1`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/post2`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
+      changeFrequency: 'weekly',
+      priority: 0.8,
     },
   ]
 
