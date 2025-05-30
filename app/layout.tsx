@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${lato.variable}`}>
       <body className="font-sans bg-white flex flex-col min-h-screen">
-        <MetaPixel pixelId="YOUR_PIXEL_ID" />
+        <MetaPixel pixelId="1351011086200587" />
         <Providers>
           <Suspense fallback={<div>Loading...</div>}>
             {/* Vietnam celebration background with subtle flags and confetti */}
