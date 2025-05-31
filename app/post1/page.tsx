@@ -95,6 +95,42 @@ const page = () => {
           })
         }}
       />
+      
+      {/* Google Ads (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16994659085"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-ads-post1"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16994659085');
+          `
+        }}
+      />
+      
+      {/* Google Analytics 4 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-NB5P4Q6ZE2"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics-post1"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-NB5P4Q6ZE2');
+          `
+        }}
+      />
       <div>
         {/* Hero Section */}
         <section className="max-w-4xl mx-auto px-4 py-24">

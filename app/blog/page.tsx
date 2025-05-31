@@ -85,6 +85,24 @@ export default function BlogPage() {
         }}
       />
       
+      {/* Google Ads (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-16994659085"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-ads"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16994659085');
+          `
+        }}
+      />
+      
       <div className="min-h-screen bg-gray-50">
         <div className="container mx-auto px-4 py-24">
           {/* Header */}
