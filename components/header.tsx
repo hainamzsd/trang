@@ -30,9 +30,10 @@ const Header = forwardRef<HTMLAnchorElement>(function Header(_, ref) {
           <nav className="hidden md:block">
             <ul className="flex space-x-8">
               {[
-             { name: "Trang chủ", href: "/" },
-             { name: "Sản phẩm", href: "/products" },
-             { name: "Về chúng tôi", href: "/about" },
+                { name: "Trang chủ", href: "/" },
+                { name: "Sản phẩm", href: "/products" },
+                { name: "Bài viết", href: "/blog" },
+                { name: "Về chúng tôi", href: "/about" },
               ].map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="relative text-gray-700 hover:text-pink-700 after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-pink-700 hover:after:w-full after:transition-all after:duration-300">
@@ -67,6 +68,7 @@ const Header = forwardRef<HTMLAnchorElement>(function Header(_, ref) {
               {[
                 { name: "Trang chủ", href: "/" },
                 { name: "Sản phẩm", href: "/products" },
+                { name: "Bài viết", href: "/blog" },
                 { name: "Về chúng tôi", href: "/about" },
               ].map((item) => (
                 <li key={item.name}>

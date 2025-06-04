@@ -18,8 +18,9 @@ export default function AsymmetricalGrid() {
             <Image
               src="/showcase/2.png"
               alt="Len Cao Cấp"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="(max-width: 768px) 100vw, 60vw"
+              style={{ objectFit: 'cover' }}
               className="scale-100 group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute bottom-0 left-0 p-8 z-20">
@@ -36,8 +37,9 @@ export default function AsymmetricalGrid() {
               <Image
                 src="/ANH/ANH1.png"
                 alt="Ống Kính Chuyên Nghiệp"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: 'cover' }}
                 className="scale-100 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute bottom-0 right-0 p-8 text-right z-20">
@@ -53,8 +55,9 @@ export default function AsymmetricalGrid() {
               <Image
                 src="/ANH/ANH5.png"
                 alt="Thủ Công Mỹ Nghệ Việt Nam"
-                layout="fill"
-                objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                style={{ objectFit: 'cover' }}
                 className="scale-100 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 p-8 z-20">

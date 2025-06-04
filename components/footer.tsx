@@ -8,10 +8,17 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Về Chúng Tôi</h3>
-            <p className="text-sm">
-              Wool Forest cung cấp các sản phẩm len cao cấp, ống kính và sản phẩm truyền thống Việt Nam. 
-              Chúng tôi tự hào về chất lượng và sự khéo léo trong từng sản phẩm.
-            </p>
+            <div className="text-sm space-y-2">
+              <h4 className="font-medium">Trụ Sở Chính</h4>
+              <p>Số 1 Võ Văn Ngân, Bình Thọ, Thủ Đức</p>
+              <p>TP. Hồ Chí Minh, Việt Nam</p>
+              
+              <h4 className="font-medium mt-4">Điện Thoại</h4>
+              <p>(+84) 28 3823 4567</p>
+              
+              <h4 className="font-medium mt-4">Email</h4>
+              <p>woolforestshop@gmail.com</p>
+            </div>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Liên Kết Nhanh</h3>

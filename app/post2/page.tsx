@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Heart, Share2, BookOpen, Users, Star, Play, CheckCircle, Lightbulb, Target } from "lucide-react"
 import { Metadata } from 'next'
 import { TextHighlighter } from '../components/text-highlighter'
+import BlogNavigation from '@/components/blog-navigation'
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -63,7 +64,7 @@ export const generateMetadata = (): Metadata => {
 const page = () => {
   return (
     <div>
-         {/* Hero Section */}
+      {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-4 py-24">
         <div className="text-center mb-8">
           <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">Học móc len</Badge>
@@ -479,6 +480,9 @@ const page = () => {
           </CardContent>
         </Card>
       </main>
+
+      {/* Blog Navigation */}
+      <BlogNavigation currentPost="post2" />
     </div>
   )
 }

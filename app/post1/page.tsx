@@ -7,6 +7,7 @@ import { Heart, Share2, BookOpen, Users, Star } from "lucide-react"
 import { Metadata } from 'next'
 import Script from 'next/script'
 import { TextHighlighter } from '../components/text-highlighter'
+import BlogNavigation from '@/components/blog-navigation'
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -429,6 +430,9 @@ const page = () => {
             </CardContent>
           </Card>
         </main>
+
+        {/* Blog Navigation */}
+        <BlogNavigation currentPost="post1" />
       </div>
     </>
   )

@@ -36,7 +36,7 @@ export default function AboutPage() {
         <div>
           <h2 className="text-3xl text-pink-800 mb-6">Hành Trình Của Chúng Tôi</h2>
           <p className="text-gray-600 mb-6">
-            Thành lập từ năm 2015, Wool Forest bắt đầu từ tình yêu với chất liệu tự nhiên và nghệ thuật nhiếp ảnh. Chúng tôi cam kết mang đến những sản phẩm cao cấp nhất, kết hợp tinh hoa thủ công Việt Nam với công nghệ hiện đại.
+            Thành lập từ năm 2025, Wool Forest bắt đầu từ tình yêu với chất liệu tự nhiên và nghệ thuật nhiếp ảnh. Chúng tôi cam kết mang đến những sản phẩm cao cấp nhất, kết hợp tinh hoa thủ công Việt Nam với công nghệ hiện đại.
           </p>
           <div className="bg-pink-50 p-6 rounded-lg">
             <h3 className="text-xl font-semibold text-pink-800 mb-4">Triết Lý Hoạt Động</h3>
