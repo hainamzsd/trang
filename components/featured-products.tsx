@@ -80,7 +80,7 @@ export default function FeaturedProducts() {
 
                 {/* Add to Cart Button */}
                 <button
-                  onClick={() => addToCart(product)}
+                  onClick={() => addToCart({ ...product, id: product.id.toString() })}
                   className="mt-4 w-full bg-pink-900 text-white px-4 py-2 rounded-full font-semibold hover:bg-pink-800 transition duration-300"
                 >
                   Thêm vào giỏ hàng
