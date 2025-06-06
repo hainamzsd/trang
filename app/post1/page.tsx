@@ -34,7 +34,7 @@ export const generateMetadata = (): Metadata => {
       authors: ["Wool Forest"],
       images: [
         {
-          url: "/ANH/ANH1.png",
+          url: "/anh/anh1.png",
           width: 1200,
           height: 630,
           alt: "Chart Móc Len - Wool Forest"
@@ -45,7 +45,7 @@ export const generateMetadata = (): Metadata => {
       card: "summary_large_image",
       title: "Chart Móc Len: Trợ Thủ Đắc Lực Của Nàng Mê Len | Wool Forest",
       description: "Khám phá bí quyết đọc chart móc len từ A-Z cùng Wool Forest. Hướng dẫn chi tiết về các loại chart móc len, cách đọc và sử dụng chart hiệu quả cho người mới bắt đầu.",
-      images: ["/ANH/ANH1.png"],
+      images: ["/anh/anh1.png"],
       creator: "@woolforest"
     },
     robots: {
@@ -74,7 +74,7 @@ const page = () => {
             "@type": "Article",
             "headline": "Chart Móc Len: Trợ Thủ Đắc Lực Của Nàng Mê Len",
             "description": "Khám phá bí quyết đọc chart móc len từ A-Z cùng Wool Forest. Hướng dẫn chi tiết về các loại chart móc len, cách đọc và sử dụng chart hiệu quả cho người mới bắt đầu.",
-            "image": "/ANH/ANH1.png",
+            "image": "/anh/anh1.png",
             "author": {
               "@type": "Organization",
               "name": "Wool Forest"
@@ -197,7 +197,7 @@ const page = () => {
                   </div>
                   <div className="relative">
                     <Image
-                      src="/ANH/ANH1.png"
+                      src="/anh/anh1.png"
                       alt="Chart móc len và những cuộn len"
                       width={400}
                       height={300}
@@ -239,7 +239,7 @@ const page = () => {
                   </div>
                   <div className="text-center mb-6">
                     <Image
-                      src="/ANH/ANH2.png"
+                      src="/anh/anh2.png"
                       alt="Chart móc len Ký Hiệu (Symbol Chart)"
                       width={500}
                       height={250}
@@ -265,7 +265,7 @@ const page = () => {
                   </div>
                   <div className="text-center mb-6">
                     <Image
-                      src="/ANH/ANH3.png"
+                      src="/anh/anh3.png"
                       alt="Chart móc len Sơ Đồ (Diagram Chart/Graph Chart)"
                       width={500}
                       height={250}
@@ -347,7 +347,7 @@ const page = () => {
 
                 <div className="text-center mt-8">
                   <Image
-                    src="/ANH/ANH4.png"
+                    src="/anh/anh4.png"
                     alt="Chart móc len 'Bánh kem Redvelvet'"
                     width={600}
                     height={300}

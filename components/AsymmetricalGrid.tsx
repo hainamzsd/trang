@@ -35,7 +35,7 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/ANH/ANH1.png"
+                src="/anh/anh1.png"
                 alt="Ống Kính Chuyên Nghiệp"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
@@ -53,7 +53,7 @@ export default function AsymmetricalGrid() {
             <div className="relative h-1/2 group">
               <div className="absolute inset-0 bg-black/40 transition-all group-hover:bg-black/30 z-10" />
               <Image
-                src="/ANH/ANH5.png"
+                src="/anh/anh5.png"
                 alt="Thủ Công Mỹ Nghệ Việt Nam"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
